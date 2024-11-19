@@ -4,12 +4,13 @@
     <title>ログイン/title>
 </head>
 <body>
-    <script>       
+    <script>
         var name = localStorage.getItem("name");
-        if (window.confirm(ログインしますか？')) {
-            if (!name) { 
-              name = prompt("名前を入力してください：");
-              localStorage.setItem("name", name);
+        if (window.confirm(新しくアカウントを作りますか(前までのデータは消去されます)？')) {
+            if (!name) {
+                name = prompt("名前を入力してください：");
+                localStorage.setItem("name", name)
+                pass = 
             }
         }
 
