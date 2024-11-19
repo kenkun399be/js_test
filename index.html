@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>テスト</title>
+    <title>挨拶プログラム</title>
 </head>
 <body>
+    <p>名前を入力して、挨拶を受け取ってください。</p>
+
     <script>
         var name = localStorage.getItem("name");
 
-        if (name) {
+        if (name) { 
           name = prompt("名前を入力してください：");
           localStorage.setItem("name", name);
         }
