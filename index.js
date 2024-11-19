@@ -1,7 +1,18 @@
-var name = localStorage.getItem("name")
-if (name) {
-		var name = prompt(`aaa`);
-    localStorage.setItem(`name` , name);
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>テスト</title>
+</head>
+<body>
+    <script>
+        var name = localStorage.getItem("name");
 
-alert( `${name}さんこんにちは！` );
+        if (name) {
+          name = prompt("名前を入力してください：");
+          localStorage.setItem("name", name);
+        }
+
+        alert(`${name}さんこんにちは！`);
+    </script>
+</body>
+</html>
