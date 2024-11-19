@@ -6,7 +6,7 @@
 <body>
     <script>
         var name = localStorage.getItem("name");
-        if (window.confirm(新しくアカウントを作りますか(前までのデータは消去されます)？')) {
+        if (window.confirm(新しくアカウントを作りますか？(前までのデータは消去されます)')) {
             if (!name) {
                 name = prompt("名前を入力してください：");
                 localStorage.setItem("name", name)
