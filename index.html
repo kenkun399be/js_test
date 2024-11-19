@@ -8,13 +8,19 @@
         var name = localStorage.getItem("name");
         if (window.confirm(新しくアカウントを作りますか？(前までのデータは消去されます)')) {
             if (!name) {
-                name = prompt("名前を入力してください：");
+                name = prompt("名前を入力");
                 localStorage.setItem("name", name)
-                pass = 
+                pass = prompt("パスワードを入力");
+                localStorage.setItem("pass", pass)
             }
+        } else {
+            var pass2 = localStorage.getItem(`pass`);
+            pass = prompt("パスワードを入力");
+            
+            if (pass == pass2) alert(`${name}さんこんにちは！`);
         }
 
-        alert(`${name}さんこんにちは！`);
+        if (name) alert(`${name}さんこんにちは！`);
     </script>
 </body>
 </html>
