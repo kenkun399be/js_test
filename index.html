@@ -1,20 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <title>挨拶プログラム</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>けんくんのサイト一覧</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      margin-top: 50px;
+      color: #333;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #fff;
+      color: #333;
+      border: 2px solid #f44336; /* 赤色のボーダー */
+      cursor: pointer;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .button:hover {
+      background-color: #f44336; /* 赤色の背景 */
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
-    <p>名前を入力して、挨拶を受け取ってください。</p>
 
-    <script>
-        var name = localStorage.getItem("name");
+  <h1>けんくんのサイト一覧</h1>
 
-        if (name) { 
-          name = prompt("名前を入力してください：");
-          localStorage.setItem("name", name);
-        }
+  <div class="button-container">
+    <button class="button" onclick="window.location.href='https://kenkun399be.github.io/trade_list/'">村人の交易表</button>
 
-        alert(`${name}さんこんにちは！`);
-    </script>
+    <button class="button" onclick="window.location.href='https://kenkun399be.github.io/movie_image/'">動画→画像</button>
+
+    <button class="button" onclick="window.location.href='https://kenkun399be.github.io/test/'">ゴミゲー</button>
+  </div>
+
 </body>
 </html>
